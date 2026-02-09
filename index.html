@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MC Valentine's Card Website</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="/assets/book-and-quill.png">
+</head>
+<body>
+<div class="clouds">
+<img class="cloud cloud1" src="assets/cloud1.png">
+<img class="cloud cloud2" src="assets/cloud2.png">
+<img class="cloud cloud3" src="assets/cloud3.png">
+<img class="cloud cloud4" src="assets/cloud4.png">
+<img class="cloud cloud5" src="assets/cloud5.png">
+<img class="cloud cloud6" src="assets/cloud6.png">
+<img class="cloud cloud7" src="assets/cloud7.png">
+</div>
+<div class="container">
+<header>
+<div class="logo">
+<img src="assets/book-and-quill.png">
+</div>
+<h1>Minecraft Valentine's Card Website</h1>
+</header>
+<div class="card-container">
+<input class="letter-date" placeholder="Feb 14, 2026" oninput="syncText()" />
+<input class="letter-title" placeholder="Dear Player..." oninput="syncText()" />
+<textarea class="letter-body" placeholder="You're more valuable than a stack of diamonds..." oninput="syncText(); autoResize(this)"></textarea>
+<textarea class="letter-signature" placeholder="Love,&#10;[Your IGN]" oninput="syncText(); autoResize(this)"></textarea>
+<div class="decorative-hearts">
+<img src="assets/heart.png">
+<img src="assets/heart.png">
+<img src="assets/heart.png">
+</div>
+</div>
+<div class="print-letter card-container" id="printLetter">
+<div id="pDate" class="letter-date"></div>
+<div id="pTitle" class="letter-title"></div>
+<div id="pBody" class="letter-body"></div>
+<div id="pSignature" class="letter-signature"></div>
+<div class="decorative-hearts">
+<img src="assets/heart.png">
+<img src="assets/heart.png">
+<img src="assets/heart.png">
+</div>
+</div>
+
+<div class="actions">
+<button onclick="downloadLetter()">Save Letter</button>
+</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
